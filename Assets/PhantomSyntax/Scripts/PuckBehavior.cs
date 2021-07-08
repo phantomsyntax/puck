@@ -5,7 +5,7 @@ namespace PhantomSyntax.Scripts {
     {
         [Header("Puck Floating Settings")]
         [SerializeField] private Rigidbody puckRigidbody;
-        [SerializeField] private float puckFloatStrength = 2.0f;
+        [SerializeField] private float puckFloatStrength = 97.0f;
         [SerializeField] private float puckImpulseStrength = 3.0f;
 
 
@@ -24,6 +24,7 @@ namespace PhantomSyntax.Scripts {
         {
             // TODO: add a float force similar to the air from the table(?)
             // see puckFloatStrength defined above
+            puckRigidbody.AddForce(Vector3.up * (puckFloatStrength * Time.deltaTime));
         }
 
         private void OnCollisionEnter(Collision other) {
