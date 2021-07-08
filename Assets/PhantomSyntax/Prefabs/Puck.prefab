@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2049234554706010654}
   - component: {fileID: 3210607244545208515}
   - component: {fileID: 1276115826012321089}
+  - component: {fileID: 1622101150}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Puck
@@ -44,7 +45,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.155, y: 0.035, z: 0.155}
+  m_Size: {x: 0.2, y: 0.04, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1276115826012321089
 Rigidbody:
@@ -54,14 +55,29 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4048267103520104611}
   serializedVersion: 2
-  m_Mass: 0.25
+  m_Mass: 0.2
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1622101150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048267103520104611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5551f947620f094291baaf13682147f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puckRigidbody: {fileID: 1276115826012321089}
+  puckFloatStrength: 90
+  puckImpulseStrength: 3.5
 --- !u!1 &4774873305314153843
 GameObject:
   m_ObjectHideFlags: 0
